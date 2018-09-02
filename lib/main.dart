@@ -25,8 +25,28 @@ class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context){
     return new Scaffold(
-      backgroundColor : Colors.lightBlueAccent,
-      body : new Container(),
+      backgroundColor : Colors.redAccent,
+      body : new Stack(
+        fit : StackFit.expand, 
+        children:<Widget>[
+          new Image(
+            image : new AssetImage("assets/clz.jpg"),
+            fit:BoxFit.cover,
+            color : Colors.black87,
+            colorBlendMode : BlendMode.darken,
+          ),
+           
+           new Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: <Widget>[
+               new FlutterLogo(
+                 size: 100.0,
+               )
+             ],
+           )
+        ],
+       
+    ),
     );
   }
 }
